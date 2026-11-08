@@ -1,4 +1,5 @@
 ﻿namespace Common.Util;
+
 public static class AppEnvironment
 {
     public static bool IsProduction()

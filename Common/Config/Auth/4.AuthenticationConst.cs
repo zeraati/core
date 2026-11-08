@@ -3,5 +3,5 @@ public static class Authentication
 {
     public const string JwtBearerScheme = "Bearer";
     public const string ApiKeyScheme = "ApiKey";
-    public const string ApiKeyHeader = "x-api-key";
+    public const string ApiKeyHeader = "X-Api-Key";
 }

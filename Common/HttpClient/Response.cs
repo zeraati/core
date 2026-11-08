@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Net;
+using System.Text.Json;
 
 namespace Common.HttpClient;
 
@@ -9,14 +10,14 @@ public class HttpClientResponse
     public virtual async Task Set(HttpResponseMessage response, CancellationToken cancellation)
     {
         IsSuccess = response.IsSuccessStatusCode;
-        StatusCode = (int)response.StatusCode;
+        StatusCode = response.StatusCode;
         ReasonPhrase = response.ReasonPhrase;
         ResponseContent = await response.Content.ReadAsStringAsync(cancellation);
     }
 
     public string ResponseContent { get; set; } = null!;
     public bool IsSuccess { get; set; }
-    public int? StatusCode { get; private set; }
+    public HttpStatusCode? StatusCode { get; private set; }
     public string? ReasonPhrase { get; private set; }
     public long DurationMs { get; set; }
 }

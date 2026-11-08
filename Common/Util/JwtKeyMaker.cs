@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Security.Cryptography;
 
-namespace FastEndpoints;
+namespace Common.Util;
 
 public static class JwtKeyMaker
 {

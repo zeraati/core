@@ -1,6 +1,7 @@
-﻿using System.Reflection;
+﻿using FastEndpoints;
+using System.Reflection;
 
-namespace FastEndpoints;
+namespace Common.Util;
 
 public static class EndpointScanner
 {
