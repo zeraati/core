@@ -1,4 +1,4 @@
 <Solution>
+  <Project Path="App/App.csproj" Id="e09fd90f-ed50-4bd3-9124-781ecd67b0e6" />
   <Project Path="Common/Common.csproj" />
-  <Project Path="Core/Core.csproj" />
 </Solution>
