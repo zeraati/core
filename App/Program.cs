@@ -10,18 +10,10 @@ using FastEndpoints.Swagger;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddMemoryCache()
-    .AddFastEndpoints()
-    .AddSwaggerConfig(true)
-    .AddHttpContextAccessor()
-    .RegisterServices()
-    .AddDbConfig<AppDbContext>(AppConfig.Connection)
-    .AddAuthConfig(AppConfig.Issuer, AppConfig.Audience)
-    .AddHttpClient<HttpClientService>();
+    .AddApplicationService()
+    .AddDbConfig<AppDbContext>(builder.Configuration);
 
 var app = builder.Build();
-app.UseAuthentication().UseAuthorization()
-   .UseDefaultExceptionHandler(useGenericReason: app.Environment.IsDevelopment()==false)
-   .UseFastEndpoints(x => { x.Endpoints.RoutePrefix = "api"; })
-   .UseSwaggerGen();
+app.UseApplicationPipeline();
+
 app.Run();
