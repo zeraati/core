@@ -12,7 +12,7 @@
 //        Get("person");
 //        AllowAnonymous();
 //    }
-
+   
 //    public override async Task HandleAsync(PersonGetRequest request, CancellationToken cancellation)
 //    {
 //        var person = await db.Set<Person>().SingleAsync(x => x.Id == request.Id,cancellation);
