@@ -1,15 +1,15 @@
 ﻿using App.Feature.Domain;
 
 namespace App.Feature.Endpoint;
-public class UserDelete(AppDbContext db): FastEndpoint<UserDeleteRequest>
+public class PersonDelete(AppDbContext db): FastEndpoint<PersonDeleteRequest>
 {
     public override void Configure()
     {
-        Delete("user");
+        Delete("person");
     }
 
-    public override async Task HandleAsync(UserDeleteRequest request, CancellationToken cancellation)
+    public override async Task HandleAsync(PersonDeleteRequest request, CancellationToken cancellation)
     {
-        await db.Set<User>().Where(x => x.Id == request.Id).ExecuteDeleteAsync(cancellation);
+        await db.Set<Person>().Where(x => x.Id == request.Id).ExecuteDeleteAsync(cancellation);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Auth;
+﻿namespace App;
 
 public class AppDbContext : DbContext
 {
@@ -19,9 +19,9 @@ public class AppDbContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
         // logging
-        //var userType = modelBuilder.Model.FindEntityType(typeof(User));
-        //var nameProp = userType?.FindProperty(nameof(Feature.User.Name));
+        //var personType = modelBuilder.Model.FindEntityType(typeof(Person));
+        //var nameProp = personType?.FindProperty(nameof(Feature.Person.Name));
         //var finalMax = nameProp?.GetMaxLength();
-        //Console.WriteLine($"User.Name MaxLength = {finalMax}");
+        //Console.WriteLine($"Person.Name MaxLength = {finalMax}");
     }
 }

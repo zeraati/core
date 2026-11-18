@@ -2,18 +2,18 @@
 
 namespace App.Feature.Endpoint;
 
-public class UserUpdate(AppDbContext db) : FastEndpoint<UserUpdateRequest>
+public class PersonUpdate(AppDbContext db) : FastEndpoint<PersonUpdateRequest>
 {
     public override void Configure()
     {
-        Put("user");
+        Put("person");
     }
 
-    public override async Task HandleAsync(UserUpdateRequest request, CancellationToken cancellation)
+    public override async Task HandleAsync(PersonUpdateRequest request, CancellationToken cancellation)
     {
-        var user = await db.Set<User>().SingleAsync(x => x.Id == request.Id, cancellation);
-        //user.Update(request.Name);
-        db.Set<User>().Update(user);
+        var person = await db.Set<Person>().SingleAsync(x => x.Id == request.Id, cancellation);
+        //person.Update(request.Name);
+        db.Set<Person>().Update(person);
         await db.SaveChangesAsync(cancellation);
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App.Feature.Endpoint;
 
-public class UserGetResponse
+public class PersonGetResponse
 {
-    public UserGetResponse(User user)
+    public PersonGetResponse(Person person)
     {
-        Id = user.Id;
-        Name = user.Name;
+        Id = person.Id;
+        Name = person.Name;
     }
 
     public long Id { get; private set; }

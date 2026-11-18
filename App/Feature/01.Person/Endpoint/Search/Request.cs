@@ -1,3 +1,3 @@
 ﻿namespace App.Feature.Endpoint;
 
-public record UserSearchRequest(string? Name);
+public record PersonSearchRequest(string? Name);

@@ -2,12 +2,12 @@
 
 namespace App.Feature.Endpoint;
 
-public class UserSearchResponse
+public class PersonSearchResponse
 {
-    public UserSearchResponse(User user)
+    public PersonSearchResponse(Person person)
     {
-        Id = user.Id;
-        Name = user.Name;
+        Id = person.Id;
+        Name = person.Name;
     }
 
     public long Id { get; private set; }

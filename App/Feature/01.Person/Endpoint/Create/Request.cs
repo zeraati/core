@@ -1,3 +1,3 @@
 ﻿namespace App.Feature.Endpoint;
 
-public record UserCreateRequest(string Name,string Username,string Mobile);
+public record PersonCreateRequest(string Name,string Mobile);

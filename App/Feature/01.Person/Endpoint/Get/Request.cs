@@ -1,3 +1,3 @@
 ﻿namespace App.Feature.Endpoint;
 
-public record UserGetRequest(long Id);
+public record PersonGetRequest(long Id);

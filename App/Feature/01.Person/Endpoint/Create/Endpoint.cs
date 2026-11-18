@@ -2,18 +2,19 @@
 
 namespace App.Feature.Endpoint;
 
-public class UserCreate(AppDbContext db) : FastEndpoint<UserCreateRequest, long>
+public class PersonCreate(AppDbContext db) : FastEndpoint<PersonCreateRequest, long>
 {
     public override void Configure()
     {
-        Post("user");
+        Post("person");
     }
 
-    public override async Task HandleAsync(UserCreateRequest request, CancellationToken cancellation)
+    public override async Task HandleAsync(PersonCreateRequest request, CancellationToken cancellation)
     {
-        var user = new User(request.Name, request.Username, request.Mobile);
-        db.Set<User>().Add(user);
+        var person = new Person(request.Name, request.Mobile);
+        db.Set<Person>().Add(person);
         await db.SaveChangesAsync(cancellation);
-        Response = user.Id;
+        
+        await Send.Success(person.Id, null, cancellation);
     }
 }

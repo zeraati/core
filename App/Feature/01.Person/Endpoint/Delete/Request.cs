@@ -1,2 +1,2 @@
 ﻿namespace App.Feature.Endpoint;
-public record UserDeleteRequest(long Id);
+public record PersonDeleteRequest(long Id);
