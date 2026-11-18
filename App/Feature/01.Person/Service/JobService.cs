@@ -30,7 +30,7 @@ public sealed class JobService(IServiceScopeFactory factory, ILogger<JobService>
             await using var scope = factory.CreateAsyncScope();
             var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-            var person = await db.Set<Person>().FirstOrDefaultAsync();
+            var person = await db.Set<Person>().OrderBy(x => x.Id).FirstOrDefaultAsync();
         }
         finally { _receiveLock.Release(); }
     }
