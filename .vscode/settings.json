@@ -1,0 +1,10 @@
+
+{
+  "files.exclude": {
+    "**/.vs": true,
+    "**/.vscode": true,
+    "**/.gitattributes": true,
+    "**/.gitignore": true,
+    "**/*.slnx": true
+  }
+}
