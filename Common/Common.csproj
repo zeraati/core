@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFramework>net11.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FastEndpoints" Version="8.3.0" />
-		<PackageReference Include="FastEndpoints.Security" Version="8.3.0" />
-		<PackageReference Include="FastEndpoints.Swagger" Version="8.3.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.14" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.14" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.14" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
-		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.14" />
+		<PackageReference Include="FastEndpoints" Version="9.0.0" />
+		<PackageReference Include="FastEndpoints.Security" Version="9.0.0" />
+		<PackageReference Include="FastEndpoints.Swagger" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="11.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="11.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="11.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="11.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="11.0.0" />
+		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="11.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
