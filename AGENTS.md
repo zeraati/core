@@ -2,9 +2,11 @@
 
 - Prefer compact, single-line declarations when they remain readable.
 - Avoid wrapping short method signatures, parameter lists, and simple expressions across multiple lines.
+- Do not use the `Async` suffix in asynchronous method names.
 
 # Documentation Guidelines
 
+- Write all documentation in Persian, keeping technical terms in English.
 - After each task, update affected documentation when changes impact behavior, architecture, business rules, or documented functionality.
 - Keep `README.md` concise, covering project overview, setup, structure, technologies, and documentation links.
 - Organize documentation by module or feature, avoiding unnecessary files for individual classes or methods.
