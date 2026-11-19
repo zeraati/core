@@ -10,4 +10,4 @@
 - Organize documentation by module or feature, avoiding unnecessary files for individual classes or methods.
 - Document important modules, classes, dependencies, responsibilities, business rules, and non-obvious logic.
 - Maintain relevant architecture, database, API, and module documentation. Use Mermaid diagrams when they improve understanding.
-- Record meaningful changes in `/docs/changelog.md` and significant architectural decisions with their rationale.
+- Record meaningful changes in `/Docs/changelog.md` and significant architectural decisions with their rationale.
