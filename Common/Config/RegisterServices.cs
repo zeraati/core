@@ -33,7 +33,7 @@ public static partial class ServiceConfig
             foreach (var service in scopedServices) services.AddScoped(service);
 
             // Hosted Services
-            var hostedServices = types.Where(x => typeof(IHosted).IsAssignableFrom(x));
+            var hostedServices = types.Where(x =>typeof(BackgroundService).IsAssignableFrom(x));
             foreach (var service in hostedServices) services.AddSingleton(typeof(IHostedService), service);
         }
 
@@ -43,4 +43,3 @@ public static partial class ServiceConfig
 
 public interface ISingleton { }
 public interface IScoped { }
-public interface IHosted { }
