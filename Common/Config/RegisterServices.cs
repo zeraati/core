@@ -24,6 +24,10 @@ public static partial class ServiceConfig
         {
             var types = assembly.GetTypes().Where(x => x.IsClass && !x.IsAbstract).ToList();
 
+            // Singleton Services
+            var singletonServices = types.Where(x => typeof(ISingleton).IsAssignableFrom(x));
+            foreach (var service in singletonServices) services.AddSingleton(service);
+
             // Scoped Services
             var scopedServices = types.Where(x => typeof(IScoped).IsAssignableFrom(x));
             foreach (var service in scopedServices) services.AddScoped(service);
@@ -37,5 +41,6 @@ public static partial class ServiceConfig
     }
 }
 
+public interface ISingleton { }
 public interface IScoped { }
 public interface IHosted { }
