@@ -1,10 +1,15 @@
-
 {
   "files.exclude": {
     "**/.vs": true,
     "**/.vscode": true,
     "**/.gitattributes": true,
     "**/.gitignore": true,
-    "**/*.slnx": true
+    "**/*.slnx": true,
+    "**/README.md": true,
+    "**/AGENTS.md": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/Properties": true,
+    "**/*.csproj": true,
   }
 }
