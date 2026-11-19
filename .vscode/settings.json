@@ -11,5 +11,6 @@
     "**/obj": true,
     "**/Properties": true,
     "**/*.csproj": true,
+    "**/dotnet-tools.json": true,
   }
 }
