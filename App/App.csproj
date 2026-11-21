@@ -4,6 +4,9 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<EnableCleanPublish>true</EnableCleanPublish>
+		<IsTransformWebConfigDisabled>$(EnableCleanPublish)</IsTransformWebConfigDisabled>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -20,5 +23,14 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Common\Common.csproj" />
 	</ItemGroup>
+
+	
+	<Target Name="CleanPublishFiles" AfterTargets="Publish" Condition="'$(EnableCleanPublish)' == 'true' and '$(PublishDir)' != '' and Exists('$(PublishDir)')">
+		<ItemGroup>
+			<FilesToDelete Include="$(PublishDir)*" Exclude="$(PublishDir)App*" />
+			<FilesToDelete Include="$(PublishDir)appsettings.json;$(PublishDir)appsettings.Development.json" />
+		</ItemGroup>
+		<Delete Files="@(FilesToDelete)" />
+	</Target>
 
 </Project>
