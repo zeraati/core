@@ -13,7 +13,7 @@ public static class ApplicationBuilderExtension
         app.UseHttpsRedirection();
         app.UseAuthentication();
         app.UseAuthorization();
-        app.UseFastEndpoints(x => { x.Endpoints.RoutePrefix = "api"; });
+        app.UseFastEndpoints();
         app.UseSwaggerGen();
         return app;
     }

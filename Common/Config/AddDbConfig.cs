@@ -16,7 +16,7 @@ public static partial class ServiceConfig
 
     private static string GetConnectionString(string connection)
     {
-        if (!Util.AppEnvironment.IsProduction())return connection;
+        if (Util.AppEnvironment.IsProduction()==false)return connection;
         
         var builder = new SqlConnectionStringBuilder(connection){DataSource = "."};
         return builder.ConnectionString;
